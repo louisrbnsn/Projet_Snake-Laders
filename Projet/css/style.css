@@ -4,41 +4,127 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('../img/rapfr.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-image: url('../img/rapfr.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.player-selection {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.player-selection h1 {
+    margin-bottom: 20px;
+}
+
+.player-selection label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.player-selection button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .board {
     display: grid;
-    grid-template-columns: repeat(5, 120px); 
-    grid-template-rows: repeat(5, 120px);
-    gap: 5px; 
-    padding: 10px; 
-    border: 3px solid #000; 
+    grid-template-columns: repeat(5, 150px); /* Updated size */
+    grid-template-rows: repeat(5, 150px); /* Updated size */
+    gap: 5px;
+    padding: 10px;
+    border: 3px solid #000;
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 .cell {
+    position: relative; /* Required for proper positioning of points */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 120px; 
-    height: 120px; 
+    width: 150px; /* Updated size */
+    height: 150px; /* Updated size */
     border: 1px solid #000;
-    font-size: 24px; 
+    font-size: 24px;
     font-weight: bold;
+}
+
+.cell-1 {
+    display: flex;
+    flex-direction: column; /* Stack number and points vertically */
+}
+
+.points-container {
+    display: flex;
+    gap: 5px; /* Space between points */
+}
+
+.point {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
 }
 
 .cell:nth-child(odd) {
     background-color: #000;
-    color: #fff; 
+    color: #fff;
 }
 
 .cell:nth-child(even) {
     background-color: #008000;
-    color: #fff; 
+    color: #fff;
 }
 
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#roll-dice {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#roll-dice:hover {
+    background-color: #444;
+}
+
+#dice-display {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
