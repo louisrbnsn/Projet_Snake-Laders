@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Musical</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,11 +14,12 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
+            background-color: #000000;
+            color: white;
         }
 
         #quiz-container {
-            background-color: white;
+            background-color: rgba(1, 36, 1, 0.8);
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -28,7 +30,7 @@
         button {
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #007BFF;
+            background-color: #008000;
             color: white;
             border: none;
             border-radius: 5px;
@@ -36,21 +38,21 @@
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #005600;
         }
 
         .answer-btn {
             display: block;
             margin: 10px 0;
             padding: 10px;
-            background-color: #e0e0e0;
+            background-color: #008000;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
 
         .answer-btn:hover {
-            background-color: #d0d0d0;
+            background-color: #005600;
         }
     </style>
 </head>
@@ -70,9 +72,9 @@
             {
                 "question": "Combien y’a t’il de membre dans le 667 ?",
                 "answers": [
-                    { "text": "19", "correct": false },
+                    { "text": "19", "correct": true },
                     { "text": "24", "correct": false },
-                    { "text": "7", "correct": true },
+                    { "text": "7", "correct": false },
                     { "text": "32", "correct": false }
                 ]
             },
@@ -225,9 +227,7 @@
                 "answers": [
                     { "text": "Elie Yaffa", "correct": true },
                     { "text": "Youssoupha Mabiki", "correct": false },
-                    { "text": "William Kalubi", "correct": false
-
- },
+                    { "text": "William Kalubi", "correct": false},
                     { "text": "Aurélien Cotentin", "correct": false }
                 ]
             },
